@@ -20,3 +20,19 @@ string[] NewArray(string[] array)
     }
     return newArray;
 }
+
+void PrintArray(string[] array)
+{
+     for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} "); 
+    }
+}
+
+Console.WriteLine("Введите размер массива: ");
+int size = int.Parse(Console.ReadLine()!);
+string[] array = GetArray(size);
+string[] newArray = NewArray(array);
+PrintArray(array);
+Console.WriteLine();
+PrintArray(newArray);
